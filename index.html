@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Football Data</title>
+    
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="static/css/dc.min.css" type="text/css" />
+    <link rel="stylesheet" href="static/css/style.css" type="text/css" />
+</head>
+<body>
+    <div id="cover" class="container-fluid cover-image">
+    <div class="container">
+       
+        <div class="row">
+            <h1 id="mast">Football Seasons</h1>
+        </div>
+        <div class= "row">
+            <button id="reset-filters">
+                Reset
+           <!-- <a href="javascript:dc.filterAll(); dc.renderAll();" id="reset" >Reset All</a>!-->
+            </button>
+        </div>
+        <button id="btn-hide">Hide</button>
+    
+    <!--<button class="btn">Reset</button>!-->
+    
+    
+    
+     <div class="col-xs-12 col-sm-12 col-md-4 bg-color-conferences section-column">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="section-heading uppercase">Conferences and Meetups attended</h3>
+                    </div>
+                </div>
+                <div id="map"></div>
+            </div>
+    
+    <div class="row">
+        <div>
+            <h3>Select a club</h3>
+        </div>
+        <div id="team-selector"></div>
+    </div>
+    <div class= "row">
+        <div>
+             <h3>Select a Season</h3>
+        </div>
+        <div class="season-selector"></div>
+    </div> 
+   
+  
+  
+    <div class="content-wrapper">
+        <div class="row">
+        <div class="col-md-3 won">
+            <h2>Won</h2>
+        </div>
+        <div class="col-md-3">
+            <h2>Lost</h2>
+        </div>
+        <div class="col-md-3">
+            <h2>Draw</h2>
+        </div>
+         <div class="col-md-3">
+            <h2>Points</h2>
+        </div>
+    </div>
+    </div>
+    <div class="row">
+      
+        
+        <div class="col-md-3 number-box  content-wrapper" id="wins-per-club">
+            <p> wins per club</p> </div>
+    
+        <div class="col-md-3 number-box  content-wrapper" id="losses-per-season"> </div>
+        <div class="col-md-3 number-box content-wrapper" id="draws-per-season"></div>
+        <div class="col-md-3 number-box  content-wrapper" id="points-per-season"></div>
+    </div>
+
+    <div class="row">
+        <div class="first">
+            <div id="wins-per-season"></div>
+        </div>
+    <h2>Goals per Season</h2>
+    <div id="goals-per-club"></div>
+    <div id="conceded-per-season"></div>
+
+    </div>
+    <div class =row>
+      <h2>Average Goals Per season</h2>
+    <div id="average-goals"></div>
+ 
+   
+    
+    <div id="touches-per-season"></div>
+    <div id="passes-per-season"></div>
+    
+    <div id="total-spend-per-club"></div>
+    <div id="year-legend"></div>
+    </div>
+    </div>
+    <div class="row">
+        <div id ="map"></div>
+    </div>
+    </div>
+  
+  <footer>
+      <h2>David Connaughton 2019</h2>
+  </footer>
+  
+    <script>
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 3,
+                center: {
+                    lat: 46.619261,
+                    lng: -33.134766
+                }
+            });
+        }
+    </script>
+ 
+ 
+ 
+ 
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABx5grm3_v6FWgF8jpeBD-9uPoh5l3Dp8&callback=initMap">
+    </script>
+    <script type="text/javascript" src="assets/js/maps.js"></script>
+  
+  
+  
+  
+</body>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="static/js/d3.min.js"></script>
+<script type="text/javascript" src="static/js/crossfilter.min.js"></script>
+<script type="text/javascript" src="static/js/dc.min.js"></script>
+<script type="text/javascript" src="static/js/queue.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+ <script type="text/javascript" src="static/js/graph.js"></script>
+ 
+
+ 
+ 
+ 
+</html>
